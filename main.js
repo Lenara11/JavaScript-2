@@ -4,23 +4,20 @@ var one = +prompt ('Введите первое число')
 var two = +prompt ('Введите второе число')
 var three = +prompt ('Введите третье число')
 
-var mn, mx, sr;
 
-if (one < two) {
-    mn = one; 
-}else mn = two;
-if (three < mn) {
-    mn = three;
+
+if (one > three && one < two || one < three && one > two) {
+    console.log('Среднее число ' + one);
+}else if (two > one && two < three || one < three && two > three) {
+    console.log('Среднее число ' + two);
+}else if (three > two && three < one || three > one && three < two) {
+    console.log('Среднее число ' + three);
+}else {
+    console.log('Нет среднего числа');
+    
 }
-if (one > two){
-    mx = one; 
-}else mx = two;
-if (three > mx) {
-    mx = three;
-    sr = one + two + three - mn - mx;
-    alert('Среднее число ' + sr);
-}else {((one !== mn && one !== mx) || (two !== mn && two !== mx) || (three !== mn && three !== mx)) 
-    alert ('Что то не то')
-}
+
+
+
 
 
